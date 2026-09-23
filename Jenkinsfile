@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Generate Report') {
             steps {
-                bat 'python app.py'
+                bat '"C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python314\\python.exe" app.py'
             }
         }
         stage('Archive Report') {
