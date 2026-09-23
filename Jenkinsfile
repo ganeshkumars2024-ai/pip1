@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/<student-username>/<repo-name>.git'
+                git branch: 'main', url: 'https://github.com/ganeshkumars2024-ai/pip1.git'
             }
         }
         stage('Generate Report') {
