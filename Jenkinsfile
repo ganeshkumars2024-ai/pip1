@@ -1,16 +1,19 @@
 pipeline {
     agent any
-
     stages {
-        stage('Checkout Code') {
+        stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/ganeshkumars2024-ai/pip1.git'
+                git branch: 'main', url: 'https://github.com/<student-username>/<repo-name>.git'
             }
         }
-
-        stage('Show Files') {
+        stage('Generate Report') {
             steps {
-                bat 'dir'
+                bat 'python app.py'
+            }
+        }
+        stage('Archive Report') {
+            steps {
+                archiveArtifacts artifacts: 'report.txt', fingerprint: true
             }
         }
     }
